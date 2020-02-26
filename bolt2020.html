@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<body>
+
+    <head>
+        <title>Project Bolt 2020</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .ntm-boltfold2 {
+            padding: 2em 0;
+        }
+        
+        .ntm-boltfold2 .unlimited-plans {
+            text-align: center;
+            color: #035193;
+            font-size: 25px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .ntm-boltfold2 .unlimited-plans h1 {
+            margin: 0;
+            color: #035193;
+            font-size: 25px;
+            display: contents;
+            font-weight: 700;
+        }
+        
+        .ntm-boltfold2 .plan-button-holder {
+            padding: 2em 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-flow: wrap;
+        }
+        
+        .ntm-boltfold2 .plan-button-holder .plan-button-list {
+            width: 20%;
+        }
+        
+        .ntm-boltfold2 .mid-holder {
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .ntm-boltfold2 .mid-holder .freebie {
+            position: absolute;
+            top: -12.5px;
+            padding: 0 15px;
+            font-weight: 700;
+            font-size: 20px;
+            color: #035193;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 0 auto;
+            display: block;
+            background-color: #ffffff;
+        }
+        
+        .ntm-boltfold2 .flexbox-container {
+            display: flex;
+            justify-content: space-around;
+            flex-flow: wrap;
+            border: 1px solid #035193;
+            padding: 2em 0;
+            border-radius: 5px;
+        }
+        
+        .ntm-boltfold2 .flexbox-container .flex-item {
+            display: flex;
+        }
+        
+        .ntm-boltfold2 .flexbox-container .flex-item:first-child {
+            align-items: center;
+        }
+        
+        .ntm-boltfold2 .flexbox-container .flex-item:first-child img {
+            height: 80px;
+            padding-right: 20px;
+        }
+        
+        .ntm-boltfold2 .flexbox-container .flex-item:first-child .free-landline {
+            font-weight: 700;
+            font-size: 20px;
+            margin: 0;
+        }
+        
+        .ntm-boltfold2 .flexbox-container .flex-item:last-child {
+            flex-direction: column;
+        }
+        
+        .ntm-boltfold2 .flexbox-container .flex-item:last-child .free-access {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .ntm-boltfold2 .flexbox-container .flex-item:last-child .entertainment-flex {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            flex-flow: wrap;
+            justify-content: space-evenly;
+        }
+        
+        .ntm-boltfold2 .flexbox-container .flex-item:last-child .entertainment-flex li {
+            width: 25%;
+            height: 45px;
+            width: 50px;
+        }
+        
+        .ntm-boltfold2 .apply-now-holder {
+            display: block;
+            text-align: center;
+            padding: 2em 0;
+        }
+        
+        .ntm-boltfold2 .apply-now-holder .apply-now {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #EDAB00;
+            border: 1px solid #EDAB00;
+            transition: 0.5s ease;
+            padding: 8px 18px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        
+        .ntm-boltfold2 .apply-now-holder .apply-now:hover {
+            background-color: transparent;
+            color: #EDAB00;
+        }
+        
+        .ntm-boltfold3 {
+            background-color: #E1E1E1;
+            padding: 2em;
+        }
+        
+        .ntm-boltfold3 .want-to {
+            font-weight: 600;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .ntm-boltfold3 .schedule-call-holder {
+            display: block;
+            text-align: center;
+        }
+        
+        .ntm-boltfold3 .schedule-call-holder .schedule-call {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #EDAB00;
+            border: 1px solid #EDAB00;
+            transition: 0.5s ease;
+            padding: 6px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        
+        .ntm-boltfold3 .schedule-call-holder .schedule-call:hover {
+            background-color: transparent;
+            color: #EDAB00;
+        }
+        
+        .ntm-boltfold4 {
+            background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_38.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 2em 0;
+        }
+        
+        .ntm-boltfold4 .existing-sub,
+        .ntm-boltfold4 .upgrade-via,
+        .ntm-boltfold4 .btn-holder {
+            display: block;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .ntm-boltfold4 .existing-sub {
+            font-size: 18px;
+        }
+        
+        .ntm-boltfold4 .upgrade-via {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .ntm-boltfold4 .btn-holder #bolt-2020-upgrade-now {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #EDAB00;
+            border: 1px solid #EDAB00;
+            transition: 0.5s ease;
+            padding: 6px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        
+        .ntm-boltfold4 .btn-holder #bolt-2020-upgrade-now:hover {
+            background-color: transparent;
+            color: #EDAB00;
+        }
+        
+        .bolt-seo-copy {
+            padding: 2.5em 0;
+            background-color: #E1E1E1;
+        }
+        
+        .bolt-seo-copy p {
+            opacity: 0.6;
+            font-size: 12px;
+        }
+        
+        .bolt-seo-copy p:last-child {
+            margin: 0px;
+        }
+        
+        @media(max-width: 768px) {
+            .ntm-boltfold2 .plan-button-holder .plan-button-list {
+                width: 45%;
+                padding: 10px;
+            }
+            .ntm-boltfold2 .plan-button-holder .plan-button-list>a>img {
+                margin: 0 auto;
+            }
+            .ntm-boltfold2 .flexbox-container .flex-item {
+                padding: 10px;
+            }
+            .ntm-boltfold2 .flexbox-container .flex-item:first-child img {
+                height: 70px;
+            }
+        }
+        /*# sourceMappingURL=style.css.map */
+    </style>
+
+    <section class="ntm-boltfold1">
+        <!-- <div class="container"> -->
+        <!-- <div class="row"> -->
+        <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/broadband-carouselbanner-GAH-Bolt-Desktop.jpg" alt="Project Bolt Banner" class="img-responsive hidden-xs hidden-sm visible-md visible-lg" style="width: 100%;">
+        <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/broadband-carouselbanner-GAH-Bolt-Mobile.jpg" alt="Project Bolt Banner" class="img-responsive visible-xs visible-sm hidden-md hidden-lg" style="width: 100%;">
+        <!-- </div> -->
+        <!-- </div> -->
+    </section>
+
+    <section class="ntm-boltfold2">
+        <div class="container">
+            <div class="row">
+                <div class="unlimited-plans">
+                    New
+                    <h1>
+                        Globe Unlimited Fiber Internet Plans
+                    </h1>
+                </div>
+                <ul class="plan-button-holder">
+                    <li class="plan-button-list">
+                        <a href="https://shop.globe.com.ph/products/broadband/go-unli-plan-2899" id="bolt-2020-plan-2899">
+                            <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_03.png" alt="Go Unli Plan 2899" class="img-responsive">
+                        </a>
+                    </li>
+                    <li class="plan-button-list">
+                        <a href="https://shop.globe.com.ph/products/broadband/go-unli-plan-2499" id="bolt-2020-plan-2499">
+                            <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_05.png" alt="Go Unli Plan 2499" class="img-responsive">
+                        </a>
+                    </li>
+                    <li class="plan-button-list">
+                        <a href="https://shop.globe.com.ph/products/broadband/go-unli-plan-1899" id="bolt-2020-plan-1899">
+                            <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_07.png" alt="Go Unli Plan 1899" class="img-responsive">
+                        </a>
+                    </li>
+                    <li class="plan-button-list">
+                        <a href="https://shop.globe.com.ph/products/broadband/go-unli-plan-1699" id="bolt-2020-plan-1699">
+                            <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_09.png" alt="Go Unli Plan 1699" class="img-responsive">
+                        </a>
+                    </li>
+                    <li class="plan-button-list">
+                        <a href="https://shop.globe.com.ph/products/broadband/go-unli-plan-1299" id="bolt-2020-plan-1299">
+                            <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_11.png" alt="Go Unli Plan 1299" class="img-responsive">
+                        </a>
+                    </li>
+                </ul>
+                <div class="mid-holder">
+
+                    <p class="freebie">Plans come with</p>
+                </div>
+                <div class="flexbox-container">
+
+                    <div class="flex-item">
+                        <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_19.png" alt="Landline Logo" class="img-responsive">
+                        <p class="free-landline">
+                            FREE landline <br class="hidden-xs">with UNLI CALLS
+                            <br>
+                            <span style="font-size: 14px; font-style: italic;">
+                                To Globe and TM for 24 months
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="flex-item">
+                        <p class="free-access">
+                            free access for 3 months
+                        </p>
+                        <ul class="entertainment-flex">
+                            <li>
+                                <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_25.png" alt="iWant TV Logo" class="img-responsive">
+                            </li>
+                            <li>
+                                <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_28.png" alt="Amazon Prime Video Logo" class="img-responsive">
+                            </li>
+                            <li>
+                                <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_22.png" alt="HOOQ Logo" class="img-responsive">
+                            </li>
+                            <li>
+                                <img src="https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing/BB/Bolt2020/project-bolt-landingpage_31.png" alt="iflix Logo" class="img-responsive">
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="apply-now-holder">
+                    <a href="https://shop.globe.com.ph/broadband#check-availability" class="apply-now" id="bolt-2020-apply-now">Apply Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="ntm-boltfold3">
+        <div class="container">
+            <div class="row">
+                <p class="want-to">
+                    Want to learn more about Go Unli plans?
+                </p>
+                <div class="schedule-call-holder">
+                    <a href="https://shop.globe.com.ph/broadband-call-request" class="schedule-call" id="bolt-2020-schedule-call"><i class="fa fa-phone">&nbsp;</i> Schedule Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ntm-boltfold4">
+        <div class="container">
+            <div class="row">
+                <p class="existing-sub">
+                    Are you an existing subscriber?
+                </p>
+                <p class="upgrade-via">
+                    Upgrade via the Globe At Home app
+                </p>
+                <div class="btn-holder">
+                    <a href="https://play.google.com/store/apps/details?id=ph.com.globe.globeathome" id="bolt-2020-upgrade-now">Upgrade Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bolt-seo-copy">
+        <div class="container">
+            <div class="row">
+                <p>
+                    <b>Globe Unlimited Fiber Internet Plans</b> <br> A next-level broadband experience awaits you and your family. Enjoy unlimited internet access, so you can surf all day, play every game, and stream any video as much as you like. Globe
+                    Unlimited Fiber Internet Plans are what you and your family deserve for your home.
+                </p>
+                <p>
+                    <b>Unlimited Fun</b> <br> No data cap means nonstop entertainment! Treat yourself to Globe unlimited data, and make the most out of your online activity from sunup to sundown. Movie marathon, anyone? What about binge-watching the latest
+                    series? The possibilities are endless.
+                </p>
+                <p>
+                    <b>High-Speed Connectivity</b><br> Go all in while playing games, streaming videos, and surfing the internet. Globe Unlimited Fiber Internet Plans equip you with browsing speeds of up to 25Mbps, so you can free yourself from endless
+                    buffering and lag. It’s a modern-day dream come true.
+                </p>
+                <p>
+                    <b>Premium Access</b> <br> You and your loved ones will have every excuse to extend your to-watch list with premium access to iWant, HOOQ, Prime Video, and iflix for three whole months. Prep the popcorn, and make it a new family tradition.
+                </p>
+                <p>
+                    Choose an internet provider that can upgrade your home and digital lifestyle. Apply now, or check out other Globe Unlimited Fiber Internet Plans available here at the Globe Online Shop.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
